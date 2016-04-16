@@ -1,0 +1,21 @@
+{
+  "name": "sentichat",
+  "version": "1.0.0",
+  "description": "A sentiment analysis enabled chat platform; sleek, stylish, and useful.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Sentiment",
+    "Analysis",
+    "Chat"
+  ],
+  "author": "Vuk Petrovic (Grandclosing)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "socket.io": "^1.4.5"
+  }
+}
