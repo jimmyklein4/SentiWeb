@@ -1,5 +1,5 @@
 
-var app = angular.module("kungPowApp", ['ngRoute', 'luegg.directives']);
+var app = angular.module("sentichatApp", ['ngRoute', 'luegg.directives']);
 
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
