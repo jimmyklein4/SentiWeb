@@ -2,8 +2,11 @@
 
     "manifest_version": 2,
     "name": "SentiWeb",
-    "description": "Sentiment-aware",
+    "description": "Sentiment-aware Chrome extension helping users browse the web with more awareness.",
     "version": "0.1",
+    "background": {
+        "page": "background.html"
+    },
     "content_scripts": [{
         "matches": [
             "http://www.reddit.com/*",
@@ -12,6 +15,7 @@
         "css": [
             "styles.css"
         ],
+        "js": ["content.js"],
         "run_at": "document_end"
     }],
     "browser_action": {
@@ -23,5 +27,11 @@
         "16": "icon16.png",
         "48": "icon48.png",
         "128": "icon128.png"
-    }
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "web_accessible_resources": [
+        "*.css"
+    ]
 }
