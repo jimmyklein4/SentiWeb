@@ -1,4 +1,11 @@
 .title{
   color: transparent !important;
   text-shadow: 0 0 20px #000 !important;
+  transition: all 0.3s ease !important;
+  -webkit-transition: all 0.3s ease !important;
+}
+
+.title:hover {
+  color: black !important;
+  text-shadow: 0 0 0px #000 !important;	
 }
