@@ -1,0 +1,18 @@
+{
+"manifest_version": 2,
+    "name": "SentiChat",
+    "description": "Sentiment-aware Chat For a Safer Internet",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://www.reddit.com/*",
+                "https://www.reddit.com/*"
+            ],
+            "css":[
+              "styles.css"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
