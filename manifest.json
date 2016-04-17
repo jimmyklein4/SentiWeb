@@ -1,25 +1,28 @@
 {
-    "manifest_version": 2,
-    "name": "SentiWeb",
-    "description": "Sentiment-aware",
-    "version": "0.1",
-    "content_scripts": [{
-        "matches": [
-            "http://www.reddit.com/*",
-            "https://www.reddit.com/*"
-        ],
-        "css": [
-            "styles.css"
-        ],
-        "run_at": "document_end",
-        "browser_action": {
-            "default_icon": "icon48.png",
-            "default_popup": "popup.html"
-        },
-        "icons": {
-            "16": "icon16.png",
-            "48": "icon48.png",
-            "128": "icon128.png"
-        }
-    }]
+  "manifest_version": 2,
+  "name": "SentiWeb",
+  "description": "Sentiment-aware",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "icon48.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [{
+    "matches": [
+      "http://www.reddit.com/*",
+      "https://www.reddit.com/*"
+    ],
+    "css": [
+      "styles.css"
+    ],
+    "run_at": "document_end",
+
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }]
 }
