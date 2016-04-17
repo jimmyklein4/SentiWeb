@@ -1,37 +1,35 @@
 {
-
-    "manifest_version": 2,
-    "name": "SentiWeb",
-    "description": "Sentiment-aware Chrome extension helping users browse the web with more awareness.",
-    "version": "0.1",
-    "background": {
-        "page": "background.html"
-    },
-    "content_scripts": [{
-        "matches": [
-            "http://www.reddit.com/*",
-            "https://www.reddit.com/*"
-        ],
-        "css": [
-            "styles.css"
-        ],
-        "js": ["content.js"],
-        "run_at": "document_end"
-    }],
-    "browser_action": {
-            "default_icon": "icon48.png",
-            "default_popup": "popup.html",
-            "default_title":"Senti-Web"
-    },
-    "icons": {
-        "16": "icon16.png",
-        "48": "icon48.png",
-        "128": "icon128.png"
-    },
-    "permissions": [
-        "tabs"
+  "manifest_version": 2,
+  "name": "SentiWeb",
+  "description": "Sentiment-aware Chrome extension helping users browse the web with more awareness.",
+  "version": "0.1",
+  "background": {
+    "scripts": ["scripts/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": [
+      "http://www.reddit.com/*",
+      "https://www.reddit.com/*"
     ],
-    "web_accessible_resources": [
-        "*.css"
+    "css": ["assets/css/styles.css"],
+    "js": ["scripts/content.js"],
+    "run_at": "document_end"
+  }],
+  "browser_action": {
+    "default_icon": "assets/img/icon48.png",
+    "default_popup": "popup.html",
+    "default_title":"Senti-Web"
+  },
+  "icons": {
+    "16": "assets/img/icon16.png",
+    "48": "assets/img/icon48.png",
+    "128": "assets/img/icon128.png"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "web_accessible_resources": [
+    "*.css"
     ]
 }
